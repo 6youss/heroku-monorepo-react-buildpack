@@ -4,8 +4,11 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 ENV_DIR=$3
 
-# building the web project
+echo "building the web project"
+
+ls
+
 yarn web:build
 
-# pulling the build folder to the rooot
+echo "pulling the build folder to the rooot"
 rsync -r "$BUILD_DIR/$APP_ROOT/build/" $BUILD_DIR/
