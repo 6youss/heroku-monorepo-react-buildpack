@@ -13,6 +13,7 @@ yarn web:build
 mv packages/web/build/ $2/web-build/
 rm -rf *
 mv $2/web-build/* .
+mv Procfile /app/
 
 ls
 
