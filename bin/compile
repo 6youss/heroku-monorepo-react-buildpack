@@ -12,6 +12,6 @@ ls
 
 yarn web:build
 
-echo "pulling the build folder to the rooot"
-rsync -r "$BUILD_DIR/$APP_ROOT/build/" $BUILD_DIR/
+rm -rf node_modules/ packages/**/node_modules/
+
 exit 0
