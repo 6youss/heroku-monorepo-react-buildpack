@@ -10,9 +10,9 @@ cd "$BUILD_DIR"
 
 yarn web:build
 
-mv packages/web/build/ "$2/temp"
-rm -rf .
-mv "$2/tmp/build/" .
+mv packages/web/build/ "$2/web-build/"
+rm -rf *
+mv "$2/web-build/" .
 
 ls
 
