@@ -8,10 +8,16 @@ echo "building the web project"
 
 cd "$BUILD_DIR"
 
-ls
-
 yarn web:build
 
-rm -rf packages/**/node_modules/
+mv packages/web/build/ "$2/temp"
+rm -rf .
+mv "$2/tmp/build/" .
+
+ls
+
+npm init -y
+
+npm install express --save
 
 exit 0
