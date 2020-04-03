@@ -6,9 +6,10 @@ ENV_DIR=$3
 
 echo "building the web project"
 
+cd "$BUILD_DIR"
 ls
-
 yarn web:build
 
 echo "pulling the build folder to the rooot"
 rsync -r "$BUILD_DIR/$APP_ROOT/build/" $BUILD_DIR/
+exit 0
