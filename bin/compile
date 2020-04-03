@@ -8,7 +8,7 @@ echo "building the web project"
 
 cd "$BUILD_DIR"
 
-yarn
+ls
 
 yarn web:build
 
