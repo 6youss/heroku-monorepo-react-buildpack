@@ -4,21 +4,25 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 ENV_DIR=$3
 
-echo "building the web project"
+echo "-----> building the web project"
 
 cd "$BUILD_DIR"
 
 yarn web:build
 
+echo "-----> moving the build to the root"
+
 mv packages/web/build/* $2/web-build/
 rm -rf *
 mv $2/web-build/* .
-mv Procfile /app/
+
+echo "-----> build files"
 
 ls
 
-npm init -y
+echo "-----> initializing server dependencies"
 
+npm init -y
 npm install express --save
 
 exit 0
