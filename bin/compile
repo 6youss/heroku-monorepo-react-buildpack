@@ -12,6 +12,7 @@ yarn web:build
 
 echo "-----> moving the build to the root"
 
+mkdir $2/web-build/
 mv packages/web/build/* $2/web-build/
 rm -rf *
 mv $2/web-build/* .
